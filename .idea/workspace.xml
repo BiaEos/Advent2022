@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/Day1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/LoadFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/calories.txt" afterDir="false" />
+    <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Compartment packages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +40,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Advent2022/DayOne" />
       <recent name="$PROJECT_DIR$/src/Advent2022" />
     </key>
   </component>
@@ -64,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671022132417</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Compartment packages">
+      <created>1671457529229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671457529229</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,28 +83,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Compartment packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compartment packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/LoadFile.java</url>
+          <url>file://$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java</url>
           <line>25</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/LoadFile.java</url>
+          <url>file://$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java</url>
           <line>20</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/LoadFile.java</url>
+          <url>file://$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java</url>
           <line>19</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/Day1.java</url>
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/Day1.java</url>
           <line>20</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>

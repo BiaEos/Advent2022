@@ -10,12 +10,14 @@
 
 package Advent2022.DayOne;
 
+import static Advent2022.DayOne.CalorieCounter.*;
 import static Advent2022.Tools.LoadFile.*;
 
 public class Day1 {
 
     public static void dayOne() {
-        loadFile("src/Advent2022/calories.txt");
+        loadFile("src/Advent2022/DayOne/calories.txt");
+        printElfWithMostCalories();
     }
 
 

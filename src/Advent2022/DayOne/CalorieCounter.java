@@ -12,16 +12,12 @@ package Advent2022.DayOne;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import static Advent2022.Tools.LoadFile.inputFromFile;
 
 public class CalorieCounter {
     private static final List<String> calories = new ArrayList<>(inputFromFile());
     private static final List<String> perElfCalories = new ArrayList<>();
     private static int mostCalories = 0;
-    private static int firstElf = 0;
-    private static int secondElf = 0;
-    private static int thirdElf = 0;
 
     public static void whichElf(){
         Scanner scanner = new Scanner(System.in);
@@ -31,8 +27,11 @@ public class CalorieCounter {
             elfWithMostCalories();
         } else if (answer.equalsIgnoreCase("no")) {
             topThreeElvesCalories();
+        } else if (answer.equalsIgnoreCase("exit")) {
+            System.exit(0);
         } else {
-            System.out.println("Please enter yes or no");
+            System.out.println("Please enter Yes, No, or Exit");
+            whichElf();
         }
     }
 
@@ -59,16 +58,15 @@ public class CalorieCounter {
                 mostCalories = currentElfCal;
             }
         }
-        printElfWithMostCalories();
-    }
-
-    private static void printElfWithMostCalories() {
         System.out.println("The elf with the most calories has " + mostCalories +
                 " calories.");
     }
 
     private static void topThreeElvesCalories() {
         countCalories();
+        int firstElf = 0;
+        int secondElf = 0;
+        int thirdElf = 0;
         for (int i = 1; i < perElfCalories.size() - 1; i++) {
             int currentElfCal = Integer.parseInt(perElfCalories.get(i - 1));
             if (currentElfCal > firstElf) {
@@ -82,10 +80,6 @@ public class CalorieCounter {
                 thirdElf = currentElfCal;
             }
         }
-        printTopThreeElves();
-    }
-
-    private static void printTopThreeElves(){
         System.out.println("The top three elves combined calories are " +
                 (firstElf + secondElf + thirdElf));
     }

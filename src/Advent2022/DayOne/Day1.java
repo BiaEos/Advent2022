@@ -1,12 +1,11 @@
 /**
- * Created by: main
+ * Created by: Alyson
  * Date: 12/19/22
  * Time: 7:53 AM
  * Project Name: Advent2022
  * Email: altrembl@amazon.com
  * Slack: altrembl
  **/
-
 
 package Advent2022.DayOne;
 
@@ -17,8 +16,6 @@ public class Day1 {
 
     public static void dayOne() {
         loadFile("src/Advent2022/DayOne/calories.txt");
-        printElfWithMostCalories();
+        whichElf();
     }
-
-
 }

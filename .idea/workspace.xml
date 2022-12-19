@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Advent2022/DayOne/Day1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayOne/Day1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,24 +100,39 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/Day1.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="25" />
+          <line>75</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="26" />
+          <line>76</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="27" />
+          <line>78</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayOne/CalorieCounter.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

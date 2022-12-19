@@ -18,4 +18,5 @@ public class Day1 {
         loadFile("src/Advent2022/calories.txt");
     }
 
+
 }

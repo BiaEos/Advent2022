@@ -30,7 +30,7 @@ public class LoadFile {
         Scanner scannerLineCount;
         try {
             scannerLineCount = new Scanner(fileToUse);
-            while (scannerLineCount.hasNext()) {
+            while (scannerLineCount.hasNextLine()) {
                 lineCount++;
                 scannerLineCount.nextLine();
             }

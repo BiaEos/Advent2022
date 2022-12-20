@@ -8,7 +8,7 @@
  **/
 
 
-package Advent2022;
+package Advent2022.DayFour;
 
 import java.util.ArrayList;
 import java.util.Scanner;

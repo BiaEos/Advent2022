@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/CampCleanup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/DayFour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/sectionAssignment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/CampCleanup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayFour/CampCleanup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/DayFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayFour/DayFour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Advent2022/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/sectionAssignment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayFour/sectionAssignment.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Advent2022/DayFour" />
       <recent name="$PROJECT_DIR$/src/Advent2022/DayOne" />
       <recent name="$PROJECT_DIR$/src/Advent2022" />
     </key>
@@ -98,66 +98,5 @@
     <MESSAGE value="Compartment packages" />
     <MESSAGE value="Initial Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="163" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="165" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="166" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="169" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/CampCleanup.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

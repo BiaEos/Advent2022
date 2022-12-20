@@ -8,14 +8,14 @@
  **/
 
 
-package Advent2022;
+package Advent2022.DayFour;
 
-import static Advent2022.CampCleanup.campCleanup;
+import static Advent2022.DayFour.CampCleanup.campCleanup;
 import static Advent2022.Tools.LoadFile.loadFile;
 
 public class DayFour {
     public static void dayFour() {
-        loadFile("src/Advent2022/sectionAssignment.txt");
+        loadFile("src/Advent2022/DayFour/sectionAssignment.txt");
         campCleanup();
     }
 }

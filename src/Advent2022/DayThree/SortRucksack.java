@@ -12,6 +12,7 @@ package Advent2022.DayThree;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import static Advent2022.Tools.LoadFile.inputFromFile;
 
@@ -22,9 +23,24 @@ public class SortRucksack {
     private static int sumPriorityValue;
 
     public static void findPriority() {
-        findDuplicateLetters();
-        assignNumberValueToLetter();
-        lettersToSum();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Do you want priority of Item or Badge?");
+        String answer = input.next();
+        if (answer.equalsIgnoreCase("Item")) {
+            findDuplicateLetters();
+            assignNumberValueToLetter();
+            lettersToSum();
+        } else if (answer.equalsIgnoreCase("Badge")) {
+            groupOfThreeElves();
+            assignNumberValueToLetter();
+            lettersToSum();
+        } else if (answer.equalsIgnoreCase("Exit")) {
+            System.exit(0);
+        } else {
+            System.out.println("Please enter Item, Badge, or Exit");
+            findPriority();
+        }
+
     }
 
     private static void lettersToSum() {
@@ -35,14 +51,15 @@ public class SortRucksack {
         }
         System.out.println("The sum of priorities is: " + sumPriorityValue);
     }
+
     private static void findDuplicateLetters() {
         for (String rucksackItem : rucksackItems) {
             String bagOne = rucksackItem.substring(0, rucksackItem.length() / 2);
             String bagTwo = rucksackItem.substring(rucksackItem.length() / 2);
-            // Starting at -1 so that the index++ is accessible while using the break outerloop
-            // it wasn't working when index was on the line before it
+
             int index = -1;
-            outerloop: for (int i = 0; i < bagOne.length(); i++) {
+            outerloop:
+            for (int i = 0; i < bagOne.length(); i++) {
                 for (int j = 0; j < bagOne.length(); j++) {
                     if (bagOne.charAt(i) == bagTwo.charAt(j)) {
                         index++;
@@ -63,6 +80,28 @@ public class SortRucksack {
         for (char capLetter = 'A'; capLetter <= 'Z'; capLetter++) {
             letterValues.put(String.valueOf(capLetter), i);
             i++;
+        }
+    }
+
+    private static void groupOfThreeElves() {
+        for (int i = 0; i < rucksackItems.size() - 2; i += 3) {
+            String rucksackOne = rucksackItems.get(i);
+            String rucksackTwo = rucksackItems.get(i + 1);
+            String rucksackThree = rucksackItems.get(i + 2);
+
+            int index = -1;
+            outerloop:
+            for (char oneLetters : rucksackOne.toCharArray()) {
+                for (char twoLetters : rucksackTwo.toCharArray()) {
+                    for (char threeLetters : rucksackThree.toCharArray()) {
+                        if (oneLetters == twoLetters && oneLetters == threeLetters) {
+                            index++;
+                            duplicateLetters.add(index, String.valueOf(oneLetters));
+                            break outerloop;
+                        }
+                    }
+                }
+            }
         }
     }
 }

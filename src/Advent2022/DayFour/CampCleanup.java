@@ -20,7 +20,8 @@ public abstract class CampCleanup extends LaunchProgram {
     private static int elfOneAreaTwo;
     private static int elfTwoAreaOne;
     private static int elfTwoAreaTwo;
-    private static int areasContained = 0;
+    private static int areasCompletelyContained = 0;
+    private static int areasPartiallyContained = 0;
 
     public static void start() {
         launchProgram("one", "two", CampCleanup.class,
@@ -29,11 +30,12 @@ public abstract class CampCleanup extends LaunchProgram {
 
     public static void startDayOne() {
         splitAndCountInput();
-        printTotal();
+        printCompletelyContainedTotal();
     }
 
     public static void startDayTwo() {
-        System.out.println("This will be day two stuff");
+        splitAndCountInput();
+        printAnyOverlapTotal();
     }
 
     private static void splitAndCountInput() {
@@ -54,11 +56,20 @@ public abstract class CampCleanup extends LaunchProgram {
     private static void countAreasContained() {
         if (elfOneAreaOne <= elfTwoAreaOne && elfOneAreaTwo >= elfTwoAreaTwo ||
                 elfTwoAreaOne <= elfOneAreaOne && elfTwoAreaTwo >= elfOneAreaTwo) {
-            areasContained++;
+            areasCompletelyContained++;
+        } else if (elfOneAreaOne <= elfTwoAreaOne && elfOneAreaTwo >= elfTwoAreaOne ||
+                elfOneAreaOne <= elfTwoAreaTwo && elfOneAreaTwo >= elfTwoAreaTwo) {
+            areasPartiallyContained++;
         }
     }
 
-    private static void printTotal() {
-        System.out.println("The number of areas that are contained by another area is " + areasContained);
+    private static void printCompletelyContainedTotal() {
+        System.out.println("The number of areas that are contained by another area is " +
+                areasCompletelyContained);
+    }
+
+    private static void printAnyOverlapTotal() {
+        System.out.println("The number of areas that have any overlap is " +
+                (areasPartiallyContained + areasCompletelyContained));
     }
 }

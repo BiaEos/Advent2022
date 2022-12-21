@@ -10,33 +10,30 @@
 
 package Advent2022.DayFour;
 
+import Advent2022.Tools.LaunchProgram;
 import java.util.ArrayList;
-import java.util.Scanner;
-
 import static Advent2022.Tools.LoadFile.inputFromFile;
 
-public class CampCleanup {
+public abstract class CampCleanup extends LaunchProgram {
     private static final ArrayList<String> cleanupAreas = new ArrayList<>(inputFromFile());
     private static int elfOneAreaOne;
     private static int elfOneAreaTwo;
     private static int elfTwoAreaOne;
     private static int elfTwoAreaTwo;
     private static int areasContained = 0;
-    public static void campCleanup() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Do you want to get part One or Two?");
-        String answer = input.next();
-        if (answer.equalsIgnoreCase("One")) {
-            splitInput();
-            printTotal();
-        } else if (answer.equalsIgnoreCase("Two")) {
-            //do day two stuff
-        } else if (answer.equalsIgnoreCase("Exit")) {
-            System.exit(0);
-        } else {
-            System.out.println("Please enter One, Two, or Exit");
-            campCleanup();
-        }
+
+    public static void start() {
+        launchProgram("one", "two", CampCleanup.class,
+                "startDayOne", "startDayTwo");
+    }
+
+    public static void startDayOne() {
+        splitInput();
+        printTotal();
+    }
+
+    public static void startDayTwo() {
+        System.out.println("This will be day two stuff");
     }
 
     private static void splitInput() {

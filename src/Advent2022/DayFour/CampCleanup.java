@@ -28,7 +28,7 @@ public abstract class CampCleanup extends LaunchProgram {
     }
 
     public static void startDayOne() {
-        splitInput();
+        splitAndCountInput();
         printTotal();
     }
 
@@ -36,7 +36,7 @@ public abstract class CampCleanup extends LaunchProgram {
         System.out.println("This will be day two stuff");
     }
 
-    private static void splitInput() {
+    private static void splitAndCountInput() {
         for (String cleanupArea : cleanupAreas) {
             int indexA = cleanupArea.indexOf(",");
             String elfOne = cleanupArea.substring(0, indexA);

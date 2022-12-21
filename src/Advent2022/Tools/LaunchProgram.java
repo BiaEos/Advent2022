@@ -15,9 +15,6 @@ import java.util.Scanner;
 public class LaunchProgram {
     public static <T> void launchProgram(String optionOne, String optionTwo, Class<T> myClass,
                                          String methodOneName, String methodTwoName) {
-        System.out.println(myClass.getName());
-        String locationOfMethod = myClass.getName();
-        System.out.println(locationOfMethod);
 
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want " + optionOne + " or " + optionTwo + " ?");

@@ -9,6 +9,7 @@
 
 package Advent2022;
 
+import static Advent2022.DayFive.DayFive.dayFive;
 import static Advent2022.DayFour.DayFour.dayFour;
 import static Advent2022.DayOne.Day1.dayOne;
 
@@ -17,6 +18,7 @@ public class Main {
         //dayOne();
         //dayTwo();
         //dayThree();
-        dayFour();
+        //dayFour();
+        dayFive();
     }
 }

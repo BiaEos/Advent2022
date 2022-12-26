@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/DayFour/CampCleanup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayFour/CampCleanup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DayFive/DayFive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DayFive/cratesProcedure.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DayFive/cratesStack.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,5 +101,41 @@
     <MESSAGE value="Compartment packages" />
     <MESSAGE value="Initial Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

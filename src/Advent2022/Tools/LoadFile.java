@@ -10,14 +10,19 @@
 package Advent2022.Tools;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class LoadFile {
     private static File fileToUse;
+    private static File fileToUse2DArray;
+    private static File fileToUse2DList;
     private static int lineCount = 0;
+    private static int lineCountB = 0;
+    private static int columnCountB = 0;
+    private static int widthOfInput = 0;
     private static final List<String> inputFromFile = new ArrayList<>();
+    private static final List<String[][]> inputFromFile2DList = new ArrayList<String[][]>();
+    private static String[][] inputFromFile2DArray;
 
     public static void loadFile(String fileName){
         fileToUse = new File(fileName);
@@ -56,4 +61,100 @@ public class LoadFile {
     public static List<String> inputFromFile() {
         return inputFromFile;
     }
+
+    public static void loadFileTo2DArray(String fileName, int columns, int widthOfIndex){
+        fileToUse2DArray = new File(fileName);
+        columnCountB = columns;
+        widthOfInput = widthOfIndex;
+        countFileLines2DArray();
+        create2DArrayFromFileB();
+        System.out.println("ArrayList size is " + inputFromFile2DArray.length);
+    }
+
+    private static void countFileLines2DArray() {
+        Scanner scannerLineCountB;
+        try {
+            scannerLineCountB = new Scanner(fileToUse2DArray);
+            while (scannerLineCountB.hasNextLine()) {
+                lineCountB++;
+                scannerLineCountB.nextLine();
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
+        System.out.println("Count of lines in file is " + lineCountB);
+    }
+
+    private static void create2DArrayFromFileB() {
+        Scanner scannerAddLine;
+        inputFromFile2DArray = new String[lineCountB][columnCountB];
+        try{
+            scannerAddLine = new Scanner(fileToUse2DArray);
+            int j = 0;
+            for (int i = 0; i < lineCountB; i++) {
+                String nextLine = scannerAddLine.nextLine();
+                for (int k = 0; k < columnCountB * widthOfInput; k+=widthOfInput) {
+                    String nextIndex = nextLine.substring(k + 1, ((k + widthOfInput) - 2));
+                    inputFromFile2DArray[i][j] = nextIndex;
+                    if (j == 8) { j = 0; }
+                    else { j++; }
+                }
+            }
+        } catch (FileNotFoundException e){
+            System.out.println("File not found");
+        }
+    }
+
+    public static String[][] inputFromFile2DArray() {
+        return inputFromFile2DArray;
+    }
+
+
+
+
+   /* public static void loadFileTo2DList(String fileName, int columns, int widthOfIndex){
+        fileToUse2DList = new File(fileName);
+        columnCountB = columns;
+        widthOfInput = widthOfIndex;
+        countFileLines2DList();
+        create2DListFromFileB();
+        System.out.println("ArrayList size is " + inputFromFile2DArray.length);
+    }
+
+    private static void countFileLines2DList() {
+        Scanner scannerLineCountB;
+        try {
+            scannerLineCountB = new Scanner(fileToUse2DList);
+            while (scannerLineCountB.hasNextLine()) {
+                lineCountB++;
+                scannerLineCountB.nextLine();
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
+        System.out.println("Count of lines in file is " + lineCountB);
+    }
+
+    private static void create2DListFromFileB() {
+        Scanner scannerAddLine;
+        try{
+            scannerAddLine = new Scanner(fileToUse2DList);
+            int j = 0;
+            for (int i = 0; i < columnCountB; i++) {
+                String nextLine = scannerAddLine.nextLine();
+                for (int k = 0; k < columnCountB * widthOfInput; k+=widthOfInput) {
+                    String nextIndex = nextLine.substring(k + 1, ((k + widthOfInput) - 2));
+                    inputFromFile2DList.add(nextIndex) = nextIndex;
+                    if (j == 8) { j = 0; }
+                    else { j++; }
+                }
+            }
+        } catch (FileNotFoundException e){
+            System.out.println("File not found");
+        }
+    }
+
+    public static List<List<String>> inputFromFileB() {
+        return inputFromFile2DList;
+    }*/
 }

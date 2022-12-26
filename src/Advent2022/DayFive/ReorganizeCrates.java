@@ -12,7 +12,9 @@ package Advent2022.DayFive;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -37,6 +39,8 @@ public class ReorganizeCrates {
         makeSpaceForMoves();
         correctStackArrangement();
         getMovesToDo();
+        System.out.println(Arrays.deepToString(stackOrganization));
+        printResults();
     }
 
     public static void startDayTwo() {
@@ -71,36 +75,41 @@ public class ReorganizeCrates {
             moveAmount = Integer.parseInt(moves[1]);
             fromColumn = Integer.parseInt(moves[2]) - 1;
             toColumn = Integer.parseInt(moves[3]) - 1;
+            System.out.println("Move " + moveAmount + " from " + fromColumn + " to " + toColumn);
             makeMoves();
         }
     }
 
     private static void makeMoves() {
-        int emptyToRow = findTopEmptyCell(toColumn);
-        //System.out.println(emptyToNumber);
-        int emptyFromRow = findTopEmptyCell(fromColumn);
-        //System.out.println(emptyFromNumber);
-
-
+        int emptyToRow = findTopCell(toColumn) + 1;
+        int emptyFromRow = findTopCell(fromColumn) + 1;
         int count = 0;
-        int moveCount = moveAmount ;
-        for (int move = moveAmount; move >= 0; move--) {
+
+        for (int move = moveAmount; move > 0; move--) {
+
+            if (findTopCell(toColumn) == -1) {
+                emptyToRow = 0;
+            }
             stackOrganization[emptyToRow + count][toColumn] =
                     stackOrganization[emptyFromRow - move][fromColumn];
             stackOrganization[emptyFromRow - move][fromColumn] = "Empty";
             count++;
         }
+        System.out.println(Arrays.deepToString(stackOrganization));
     }
 
-    private static int findTopEmptyCell(int cellNumber) {
-        int emptyEntry = 0;
-        for (int row = 30; row > 0; row--) {
-            if (!isEmpty(stackOrganization[row][cellNumber])) {
-                emptyEntry = row + 1;
+    private static int findTopCell(int column) {
+        int topCell = 0;
+        for (int row = 80; row > 0; row--) {
+            if (!isEmpty(stackOrganization[row][column])) {
+                topCell = row;
+                break;
+            } else if (isEmpty(stackOrganization[0][column])) {
+                topCell = -1;
                 break;
             }
         }
-        return emptyEntry;
+        return topCell;
     }
 
     private static boolean isEmpty(@NotNull String testEmpty) {
@@ -111,5 +120,12 @@ public class ReorganizeCrates {
             empty = true;
         }
         return empty;
+    }
+
+    private static void printResults() {
+        for (int col = 0; col < 9; col++) {
+            int topCell = findTopCell(col);
+            System.out.println(stackOrganization[topCell][col]);
+        }
     }
 }

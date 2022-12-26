@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Advent2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Advent2022.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,28 +106,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="280" />
+          <line>77</line>
+          <option name="timeStamp" value="290" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="281" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="282" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="283" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="284" />
+          <line>91</line>
+          <option name="timeStamp" value="313" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -14,7 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
-
 import static Advent2022.Tools.LaunchProgram.launchProgram;
 import static Advent2022.Tools.LoadFile.inputFromFile;
 import static Advent2022.Tools.LoadFile.inputFromFile2DArray;
@@ -77,9 +76,7 @@ public class ReorganizeCrates {
         int emptyToRow = findTopCell(toColumn) + 1;
         int emptyFromRow = findTopCell(fromColumn) + 1;
         int count = 0;
-
         for (int move = moveAmount; move > 0; move--) {
-
             if (findTopCell(toColumn) == -1) {
                 emptyToRow = 0;
             }

@@ -11,9 +11,6 @@
 package Advent2022.DayFive;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -23,7 +20,6 @@ import static Advent2022.Tools.LoadFile.inputFromFile;
 import static Advent2022.Tools.LoadFile.inputFromFile2DArray;
 
 public class ReorganizeCrates {
-    private static List<String> movesToMake = new ArrayList<>();
     private static String[][] crateStack;
     private static String[][] stackOrganization;
     private static int moveAmount;
@@ -59,15 +55,13 @@ public class ReorganizeCrates {
     private static void correctStackArrangement() {
         int changeIndex = 7;
         for (int row = 0; row < 8; row++) {
-            for (int col = 0; col < 9; col++) {
-                stackOrganization[changeIndex][col] = crateStack[row][col];
-            }
+            System.arraycopy(crateStack[row], 0, stackOrganization[changeIndex], 0, 9);
             changeIndex--;
         }
     }
 
     private static void getMovesToDo() {
-        movesToMake = inputFromFile();
+        List<String> movesToMake = inputFromFile();
         for (String moveToMake : movesToMake) {
             Pattern movePattern = Pattern.compile("\\D+\\s");
             String[] moves = moveToMake.split(String.valueOf(movePattern));

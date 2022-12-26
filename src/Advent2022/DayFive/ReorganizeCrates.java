@@ -10,8 +10,9 @@
 
 package Advent2022.DayFive;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -24,8 +25,8 @@ public class ReorganizeCrates {
     private static String[][] crateStack;
     private static String[][] stackOrganization;
     private static int moveAmount;
-    private static int fromNumber;
-    private static int toNumber;
+    private static int fromColumn;
+    private static int toColumn;
 
     public static void start() {
         launchProgram("one", "two", ReorganizeCrates.class,
@@ -34,6 +35,7 @@ public class ReorganizeCrates {
 
     public static void startDayOne() {
         makeSpaceForMoves();
+        correctStackArrangement();
         getMovesToDo();
     }
 
@@ -49,6 +51,9 @@ public class ReorganizeCrates {
                 stackOrganization[i][j] = "Empty";
             }
         }
+    }
+
+    private static void correctStackArrangement() {
         int changeIndex = 7;
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 9; col++) {
@@ -56,7 +61,6 @@ public class ReorganizeCrates {
             }
             changeIndex--;
         }
-        //System.out.println(Arrays.deepToString(stackOrganization));
     }
 
     private static void getMovesToDo() {
@@ -65,30 +69,41 @@ public class ReorganizeCrates {
             Pattern movePattern = Pattern.compile("\\D+\\s");
             String[] moves = moveToMake.split(String.valueOf(movePattern));
             moveAmount = Integer.parseInt(moves[1]);
-            fromNumber = Integer.parseInt(moves[2]) - 1;
-            toNumber = Integer.parseInt(moves[3]) - 1;
+            fromColumn = Integer.parseInt(moves[2]) - 1;
+            toColumn = Integer.parseInt(moves[3]) - 1;
             makeMoves();
         }
     }
 
     private static void makeMoves() {
-        int emptyToNumber = entryToTest(toNumber);
-        System.out.println(emptyToNumber);
+        int emptyToRow = findTopEmptyCell(toColumn);
+        //System.out.println(emptyToNumber);
+        int emptyFromRow = findTopEmptyCell(fromColumn);
+        //System.out.println(emptyFromNumber);
 
+
+        int count = 0;
+        int moveCount = moveAmount ;
+        for (int move = moveAmount; move >= 0; move--) {
+            stackOrganization[emptyToRow + count][toColumn] =
+                    stackOrganization[emptyFromRow - move][fromColumn];
+            stackOrganization[emptyFromRow - move][fromColumn] = "Empty";
+            count++;
+        }
     }
 
-    private static int entryToTest(int toNumber) {
+    private static int findTopEmptyCell(int cellNumber) {
         int emptyEntry = 0;
-        for (int i = 30; i > 0; i--) {
-            if (!isEmpty(stackOrganization[i][toNumber])) {
-                emptyEntry = i + 1;
+        for (int row = 30; row > 0; row--) {
+            if (!isEmpty(stackOrganization[row][cellNumber])) {
+                emptyEntry = row + 1;
                 break;
             }
         }
         return emptyEntry;
     }
 
-    private static boolean isEmpty(String testEmpty) {
+    private static boolean isEmpty(@NotNull String testEmpty) {
         boolean empty = false;
         if (testEmpty.equals("Empty")) {
             empty = true;

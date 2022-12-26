@@ -39,7 +39,6 @@ public class ReorganizeCrates {
         makeSpaceForMoves();
         correctStackArrangement();
         getMovesToDo();
-        System.out.println(Arrays.deepToString(stackOrganization));
         printResults();
     }
 
@@ -123,9 +122,15 @@ public class ReorganizeCrates {
     }
 
     private static void printResults() {
+        StringBuilder answer = new StringBuilder();
         for (int col = 0; col < 9; col++) {
             int topCell = findTopCell(col);
-            System.out.println(stackOrganization[topCell][col]);
+            answer.append(stackOrganization[topCell][col]);
         }
+        System.out.println();
+        System.out.println();
+        System.out.print("The answer is: " + answer);
+        System.out.println();
+        System.out.println();
     }
 }

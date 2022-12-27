@@ -86,7 +86,6 @@ public class ReorganizeCrates {
     }
 
     private static void makeMovesIndividual() {
-<<<<<<< HEAD
         int emptyToRow = findTopCell(toColumn) + 1;
         int emptyFromRow = findTopCell(fromColumn) + 1;
         int count = 0;
@@ -99,25 +98,6 @@ public class ReorganizeCrates {
             stackOrganization[emptyFromRow - 1 - count][fromColumn] = "Empty";
             count++;
         }
-    }
-
-    private static void makeMovesTogether() {
-=======
->>>>>>> 0dbed7c (Day 1 Part 2 complete)
-        int emptyToRow = findTopCell(toColumn) + 1;
-        int emptyFromRow = findTopCell(fromColumn) + 1;
-        int count = 0;
-        for (int move = moveAmount; move > 0; move--) {
-            if (findTopCell(toColumn) == -1) {
-                emptyToRow = 0;
-            }
-            stackOrganization[emptyToRow + count][toColumn] =
-                    stackOrganization[emptyFromRow - 1 - count][fromColumn];
-            stackOrganization[emptyFromRow - 1 - count][fromColumn] = "Empty";
-            count++;
-        }
-<<<<<<< HEAD
-=======
     }
 
     private static void makeMovesTogether() {
@@ -133,7 +113,6 @@ public class ReorganizeCrates {
             stackOrganization[emptyFromRow - move][fromColumn] = "Empty";
             count++;
         }
->>>>>>> 0dbed7c (Day 1 Part 2 complete)
     }
 
     private static int findTopCell(int column) {

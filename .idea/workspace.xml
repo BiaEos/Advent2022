@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Initial Commit" />
-=======
-    <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="Initial Commit">
+    <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java" afterDir="false" />
     </list>
->>>>>>> 0dbed7c8bee3b7905ea3927c74f2e885bcfff3c9
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,18 +32,18 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "fileTemplates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Advent2022/DayFour" />
@@ -104,78 +101,30 @@
     <MESSAGE value="Initial Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <line>72</line>
-=======
-          <line>69</line>
->>>>>>> 3b233a1 (Day 1 Part 1 complete)
-=======
-          <line>72</line>
->>>>>>> 0dbed7c (Day 1 Part 2 complete)
           <option name="timeStamp" value="317" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <line>98</line>
-=======
-          <line>82</line>
->>>>>>> 3b233a1 (Day 1 Part 1 complete)
-=======
-          <line>98</line>
->>>>>>> 0dbed7c (Day 1 Part 2 complete)
           <option name="timeStamp" value="318" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <line>100</line>
-=======
-          <line>84</line>
->>>>>>> 3b233a1 (Day 1 Part 1 complete)
-=======
-          <line>100</line>
->>>>>>> 0dbed7c (Day 1 Part 2 complete)
           <option name="timeStamp" value="319" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <line>103</line>
-=======
-          <line>87</line>
->>>>>>> 3b233a1 (Day 1 Part 1 complete)
-=======
-          <line>103</line>
->>>>>>> 0dbed7c (Day 1 Part 2 complete)
           <option name="timeStamp" value="330" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <line>99</line>
-=======
-          <line>83</line>
->>>>>>> 3b233a1 (Day 1 Part 1 complete)
-=======
-          <line>99</line>
->>>>>>> 0dbed7c (Day 1 Part 2 complete)
           <option name="timeStamp" value="334" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
->>>>>>> 0dbed7c8bee3b7905ea3927c74f2e885bcfff3c9
 </project>

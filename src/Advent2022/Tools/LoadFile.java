@@ -15,13 +15,11 @@ import java.util.*;
 public class LoadFile {
     private static File fileToUse;
     private static File fileToUse2DArray;
-    private static File fileToUse2DList;
     private static int lineCount = 0;
     private static int lineCountB = 0;
     private static int columnCountB = 0;
     private static int widthOfInput = 0;
     private static final List<String> inputFromFile = new ArrayList<>();
-    private static final List<String[][]> inputFromFile2DList = new ArrayList<String[][]>();
     private static String[][] inputFromFile2DArray;
 
     public static void loadFile(String fileName) {

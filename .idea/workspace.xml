@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySix/CommunicationSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySix/DaySix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySix/data-streamBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Tools/LoadFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,20 +113,9 @@
           <option name="timeStamp" value="317" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <option name="timeStamp" value="318" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <option name="timeStamp" value="319" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <option name="timeStamp" value="330" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayFive/ReorganizeCrates.java</url>
-          <option name="timeStamp" value="334" />
+          <url>file://$PROJECT_DIR$/src/Advent2022/DaySix/CommunicationSystem.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="358" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

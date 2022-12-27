@@ -11,7 +11,6 @@
 package Advent2022.DayFive;
 
 import org.jetbrains.annotations.NotNull;
-import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 import static Advent2022.Tools.LaunchProgram.launchProgram;
@@ -33,12 +32,15 @@ public class ReorganizeCrates {
     public static void startDayOne() {
         makeSpaceForMoves();
         correctStackArrangement();
-        getMovesToDo();
+        getMovesToDoIndividual();
         printResults();
     }
 
     public static void startDayTwo() {
-        //do day two things
+        makeSpaceForMoves();
+        correctStackArrangement();
+        getMovesToDoTogether();
+        printResults();
     }
 
     private static void makeSpaceForMoves() {
@@ -59,7 +61,7 @@ public class ReorganizeCrates {
         }
     }
 
-    private static void getMovesToDo() {
+    private static void getMovesToDoIndividual() {
         List<String> movesToMake = inputFromFile();
         for (String moveToMake : movesToMake) {
             Pattern movePattern = Pattern.compile("\\D+\\s");
@@ -67,12 +69,23 @@ public class ReorganizeCrates {
             moveAmount = Integer.parseInt(moves[1]);
             fromColumn = Integer.parseInt(moves[2]) - 1;
             toColumn = Integer.parseInt(moves[3]) - 1;
-            System.out.println("Move " + moveAmount + " from " + fromColumn + " to " + toColumn);
-            makeMoves();
+            makeMovesIndividual();
         }
     }
 
-    private static void makeMoves() {
+    private static void getMovesToDoTogether() {
+        List<String> movesToMake = inputFromFile();
+        for (String moveToMake : movesToMake) {
+            Pattern movePattern = Pattern.compile("\\D+\\s");
+            String[] moves = moveToMake.split(String.valueOf(movePattern));
+            moveAmount = Integer.parseInt(moves[1]);
+            fromColumn = Integer.parseInt(moves[2]) - 1;
+            toColumn = Integer.parseInt(moves[3]) - 1;
+            makeMovesTogether();
+        }
+    }
+
+    private static void makeMovesIndividual() {
         int emptyToRow = findTopCell(toColumn) + 1;
         int emptyFromRow = findTopCell(fromColumn) + 1;
         int count = 0;
@@ -85,7 +98,21 @@ public class ReorganizeCrates {
             stackOrganization[emptyFromRow - 1 - count][fromColumn] = "Empty";
             count++;
         }
-        System.out.println(Arrays.deepToString(stackOrganization));
+    }
+
+    private static void makeMovesTogether() {
+        int emptyToRow = findTopCell(toColumn) + 1;
+        int emptyFromRow = findTopCell(fromColumn) + 1;
+        int count = 0;
+        for (int move = moveAmount; move > 0; move--) {
+            if (findTopCell(toColumn) == -1) {
+                emptyToRow = 0;
+            }
+            stackOrganization[emptyToRow + count][toColumn] =
+                    stackOrganization[emptyFromRow - move][fromColumn];
+            stackOrganization[emptyFromRow - move][fromColumn] = "Empty";
+            count++;
+        }
     }
 
     private static int findTopCell(int column) {
@@ -118,10 +145,6 @@ public class ReorganizeCrates {
             int topCell = findTopCell(col);
             answer.append(stackOrganization[topCell][col]);
         }
-        System.out.println();
-        System.out.println();
         System.out.print("The answer is: " + answer);
-        System.out.println();
-        System.out.println();
     }
 }

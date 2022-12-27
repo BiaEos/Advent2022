@@ -81,8 +81,8 @@ public class ReorganizeCrates {
                 emptyToRow = 0;
             }
             stackOrganization[emptyToRow + count][toColumn] =
-                    stackOrganization[emptyFromRow - move][fromColumn];
-            stackOrganization[emptyFromRow - move][fromColumn] = "Empty";
+                    stackOrganization[emptyFromRow - 1 - count][fromColumn];
+            stackOrganization[emptyFromRow - 1 - count][fromColumn] = "Empty";
             count++;
         }
         System.out.println(Arrays.deepToString(stackOrganization));

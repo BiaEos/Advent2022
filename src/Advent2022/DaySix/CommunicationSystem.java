@@ -10,6 +10,7 @@
 
 package Advent2022.DaySix;
 
+import java.util.HashSet;
 import java.util.List;
 import static Advent2022.Tools.LaunchProgram.launchProgram;
 import static Advent2022.Tools.LoadFile.inputFromFile;
@@ -25,11 +26,12 @@ public class CommunicationSystem {
 
     public static void startDayOne() {
         getIndividualLetters();
-        hasAMatchingLetter();
+        hasNoMatchingLetter();
     }
 
     public static void startDayTwo() {
-        // do day two stuff
+        getIndividualLetters();
+        fourteenIndividualLetters();
     }
 
     private static void getIndividualLetters() {
@@ -40,7 +42,7 @@ public class CommunicationSystem {
         }
     }
 
-    private static void hasAMatchingLetter () {
+    private static void hasNoMatchingLetter () {
         Integer[] values = new Integer[6];
         for (int letter = 0; letter < individualLetters.length - 3; letter++) {
             values[0] = Character.compare(individualLetters[letter], individualLetters[letter + 1]);
@@ -53,6 +55,20 @@ public class CommunicationSystem {
                 System.out.println("The first marker is at: Letter " + (letter + 4));
                 break;
             }
+        }
+    }
+
+    private static void fourteenIndividualLetters() {
+        HashSet<Character> lettersToCheck = new HashSet<>();
+        outerloop: for (int letter = 0; letter < individualLetters.length - 14; letter++) {
+            for (int nextLetter = 0; nextLetter < 14; nextLetter++) {
+                lettersToCheck.add(individualLetters[letter + nextLetter]);
+                if (lettersToCheck.size() == 14) {
+                    System.out.println("The first marker is at: Letter " + (letter + 14));
+                    break outerloop;
+                }
+            }
+            lettersToCheck.clear();
         }
     }
 }

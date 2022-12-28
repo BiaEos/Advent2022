@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/DaySeven.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/terminalOutput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/DaySix/CommunicationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DaySix/CommunicationSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/DaySix/data-streamBuffer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DaySix/data-streamBuffer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Advent2022/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

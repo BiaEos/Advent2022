@@ -103,7 +103,7 @@ public class SpaceOnDevice {
         }
     }
 
-    public static void writeToFile(String fileName, String fileSize) {
+    private static void writeToFile(String fileName, String fileSize) {
         try {
             FileWriter myWriter = new FileWriter(tempFolderMainPath +
                     additionalPaths + "/" + fileName + ".txt");

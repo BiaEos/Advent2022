@@ -12,24 +12,26 @@ package Advent2022.DaySeven;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 import static Advent2022.Tools.LaunchProgram.launchProgram;
 import static Advent2022.Tools.LoadFile.inputFromFile;
 
 public class SpaceOnDevice {
-    private static File directory;
-    private static ArrayList<String> outputFromTerminal = new ArrayList<>(inputFromFile());
+    private static final ArrayList<String> outputFromTerminal = new ArrayList<>(inputFromFile());
+    private static final String tempFolderMainPath = "/Users/main/Projects/Advent2022/src/Advent2022/DaySeven/";
+    private static String additionalPaths = "";
+    private static String directoryName;
+    private static String fileName;
+
     public static void start() {
         launchProgram("one", "two", SpaceOnDevice.class,
                 "startDayOne", "startDayTwo");
     }
 
     public static void startDayOne() {
-        //System.out.println(outputFromTerminal);
-        //createDirectory("TempFolder", "/Users/main/Projects/Advent2022/src/Advent2022/DaySeven/");
-        //changeFolders();
-        //addFiles();
+        createDirectory("TempFolder", tempFolderMainPath);
         handleData();
     }
 
@@ -57,12 +59,14 @@ public class SpaceOnDevice {
     private static void handleData() {
         for (int i = 0; i < outputFromTerminal.size(); i++) {
             if ((outputFromTerminal.get(i).matches("\\W\\scd\\s[a-z]+")) ||
-                    (outputFromTerminal.get(i).startsWith("$ cd .."))) {
+                    (outputFromTerminal.get(i).startsWith("$ cd ..")) ||
+                    (outputFromTerminal.get(i).startsWith("$ cd /"))) {
                 changeFolders(i);
             } else if (outputFromTerminal.get(i).matches("\\W\\sls")) {
-                System.out.println("List Files");
+                System.out.println("List files command");
             } else if (outputFromTerminal.get(i).matches("dir\\s\\w+")) {
-                System.out.println("Dir");
+                System.out.println("Directory name");
+                addDirectory(i);
             } else if ((outputFromTerminal.get(i).matches("\\d+\\s\\w+") ||
                     outputFromTerminal.get(i).matches("\\d+\\s\\w+\\.\\w+"))) {
                 addFiles(i);
@@ -76,8 +80,30 @@ public class SpaceOnDevice {
         if (outputFromTerminal.get(numberInArray).matches(String.valueOf(cdPattern))) {
             directory = "/" + outputFromTerminal.get(numberInArray).substring(5);
             System.out.println(directory);
+            additionalPaths = additionalPaths + directory;
+            System.out.println(additionalPaths);
+
+
         } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd ..")) {
-            directory = outputFromTerminal.get(numberInArray).substring(5);
+            directory = "/" + outputFromTerminal.get(numberInArray).substring(5);
+            System.out.println(directory);
+            String[] separatePaths = additionalPaths.split("/");
+            System.out.println(Arrays.deepToString(separatePaths));
+            additionalPaths = "/";
+
+
+            if (!(separatePaths.length - 1 == 1)) {
+                for (int index = 1; index < separatePaths.length - 1; index++) {
+                    additionalPaths = additionalPaths + separatePaths[index] + "/";
+                    System.out.println(additionalPaths);
+                }
+            } else {
+                additionalPaths = "";
+            }
+
+
+        } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd /")) {
+            directory = "/";
             System.out.println(directory);
         }
     }
@@ -94,6 +120,26 @@ public class SpaceOnDevice {
             System.out.println(fileSize);
             fileName = completeFile[1];
             System.out.println(fileName);
-            }
+        }
+        //TODO check if doesExist() and if it doesn't then create file in correct directory
+    }
+
+    private static void addDirectory(int numberInArray) {
+        String[] directoryComplete = outputFromTerminal.get(numberInArray).split("\\s");
+        directoryName = directoryComplete[1];
+
+
+        //additionalPaths = additionalPaths + "/" + directoryName;
+        //System.out.println(directoryName);
+        //System.out.println(additionalPaths);
+
+    }
+
+    private static boolean doesExist(int numberInArray) {
+        File directory = new File(tempFolderMainPath + additionalPaths + directoryName);
+        if (directory.exists()) {
+            return true;
+        }
+        return false;
     }
 }

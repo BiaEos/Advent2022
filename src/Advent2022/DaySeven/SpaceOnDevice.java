@@ -11,6 +11,8 @@
 package Advent2022.DaySeven;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Pattern;
@@ -36,6 +38,36 @@ public class SpaceOnDevice {
         //do day two stuff
     }
 
+    private static void handleData() {
+        for (int i = 0; i < outputFromTerminal.size(); i++) {
+            if ((outputFromTerminal.get(i).matches("\\W\\scd\\s[a-z]+")) ||
+                    (outputFromTerminal.get(i).startsWith("$ cd ..")) ||
+                    (outputFromTerminal.get(i).startsWith("$ cd /"))) {
+                changeFolders(i);
+            } else if (outputFromTerminal.get(i).matches("\\W\\sls")) {
+                System.out.println("List files command");
+            } else if (outputFromTerminal.get(i).matches("dir\\s\\w+")) {
+                addDirectory(i);
+            } else if ((outputFromTerminal.get(i).matches("\\d+\\s\\w+") ||
+                    outputFromTerminal.get(i).matches("\\d+\\s\\w+\\.\\w+"))) {
+                addFile(i);
+            }
+        }
+    }
+
+    private static void addDirectory(int numberInArray) {
+        System.out.println("This is the current desired directory: " +
+                tempFolderMainPath + additionalPaths);
+        String[] dirName = outputFromTerminal.get(numberInArray).split("\\s");
+        System.out.println("Does this directory exist " + tempFolderMainPath +
+                additionalPaths + "/" +dirName[1]);
+        System.out.println(doesExist(
+                tempFolderMainPath + additionalPaths + "/" + dirName[1]));
+        if (!(doesExist(tempFolderMainPath + additionalPaths + "/" + dirName[1]))) {
+            createDirectory("/" + dirName[1], tempFolderMainPath + additionalPaths);
+        }
+    }
+
     private static void createDirectory(String directoryName, String path) {
         boolean success;
         File directory = new File(path + directoryName);
@@ -53,20 +85,43 @@ public class SpaceOnDevice {
         }
     }
 
-    private static void handleData() {
-        for (int i = 0; i < outputFromTerminal.size(); i++) {
-            if ((outputFromTerminal.get(i).matches("\\W\\scd\\s[a-z]+")) ||
-                    (outputFromTerminal.get(i).startsWith("$ cd ..")) ||
-                    (outputFromTerminal.get(i).startsWith("$ cd /"))) {
-                changeFolders(i);
-            } else if (outputFromTerminal.get(i).matches("\\W\\sls")) {
-                System.out.println("List files command");
-            } else if (outputFromTerminal.get(i).matches("dir\\s\\w+")) {
-                addDirectory(i);
-            } else if ((outputFromTerminal.get(i).matches("\\d+\\s\\w+") ||
-                    outputFromTerminal.get(i).matches("\\d+\\s\\w+\\.\\w+"))) {
-                addFiles(i);
+    private static void addFile(int numberInArray) {
+        String fileName;
+        String fileSize;
+        String[] completeFile = outputFromTerminal.get(numberInArray).split("\\s");
+        fileSize = completeFile[0];
+        //System.out.println(fileSize);
+        fileName = completeFile[1];
+        //System.out.println(fileName);
+        //}
+        if (!(doesExist(tempFolderMainPath + additionalPaths + fileName))) {
+            createFile(fileName, tempFolderMainPath + additionalPaths);
+            writeToFile(fileName, fileSize);
+        }
+    }
+
+    private static void createFile(String fileName, String path) {
+        try {
+            File file = new File(path + "/" + fileName + ".txt");
+            if (file.createNewFile()) {
+                System.out.println("File created successfully");
+            } else {
+                System.out.println("File already exists");
             }
+        } catch (IOException e) {
+            System.out.println("Error occurred");
+        }
+    }
+
+    public static void writeToFile(String fileName, String fileSize) {
+        try {
+            FileWriter myWriter = new FileWriter(tempFolderMainPath +
+                    additionalPaths + "/" + fileName + ".txt");
+            myWriter.write(fileSize);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
         }
     }
 
@@ -99,35 +154,6 @@ public class SpaceOnDevice {
         }
         if (!doesExist(tempFolderMainPath + additionalPaths)) {
             createDirectory(additionalPaths, tempFolderMainPath);
-        }
-    }
-
-    private static void addFiles(int numberInArray) {
-        Pattern filePatternA = Pattern.compile("\\d+\\s\\w+");
-        Pattern filePatternB = Pattern.compile("\\d+\\s\\w+\\.\\w+");
-        String fileName;
-        String fileSize;
-        if (outputFromTerminal.get(numberInArray).matches(String.valueOf(filePatternA)) ||
-                outputFromTerminal.get(numberInArray).matches(String.valueOf(filePatternB))) {
-            String[] completeFile = outputFromTerminal.get(numberInArray).split("\\s");
-            fileSize = completeFile[0];
-            System.out.println(fileSize);
-            fileName = completeFile[1];
-            System.out.println(fileName);
-        }
-        //TODO check if doesExist() and if it doesn't then create file in correct directory
-    }
-
-    private static void addDirectory(int numberInArray) {
-        System.out.println("This is the current desired directory: " +
-                tempFolderMainPath + additionalPaths);
-        String[] dirName = outputFromTerminal.get(numberInArray).split("\\s");
-        System.out.println("Does this directory exist " + tempFolderMainPath +
-                additionalPaths + "/" +dirName[1]);
-        System.out.println(doesExist(
-                tempFolderMainPath + additionalPaths + "/" + dirName[1]));
-        if (!(doesExist(tempFolderMainPath + additionalPaths + "/" + dirName[1]))) {
-            createDirectory("/" + dirName[1], tempFolderMainPath + additionalPaths);
         }
     }
 

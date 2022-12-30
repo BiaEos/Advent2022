@@ -121,7 +121,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>84</line>
+          <line>86</line>
           <option name="timeStamp" value="407" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -131,17 +131,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>86</line>
+          <line>88</line>
           <option name="timeStamp" value="431" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>87</line>
+          <line>89</line>
           <option name="timeStamp" value="432" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>88</line>
+          <line>90</line>
           <option name="timeStamp" value="433" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -166,23 +166,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>85</line>
+          <line>87</line>
           <option name="timeStamp" value="438" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>89</line>
+          <line>91</line>
           <option name="timeStamp" value="440" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>92</line>
+          <line>96</line>
           <option name="timeStamp" value="442" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
-          <line>93</line>
+          <line>97</line>
           <option name="timeStamp" value="443" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="448" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="450" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="451" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="452" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

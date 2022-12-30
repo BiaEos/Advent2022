@@ -40,7 +40,7 @@ public class SpaceOnDevice {
     }
 
     private static void createDirectory(String directoryName, String path) {
-        boolean success = false;
+        boolean success;
         File directory = new File(path + directoryName);
         if (directory.exists() && directory.isDirectory()) {
             System.out.println("Directory already exists");
@@ -78,33 +78,36 @@ public class SpaceOnDevice {
         String directory;
         Pattern cdPattern = Pattern.compile("\\W\\scd\\s[a-z]+");
         if (outputFromTerminal.get(numberInArray).matches(String.valueOf(cdPattern))) {
-            directory = "/" + outputFromTerminal.get(numberInArray).substring(5);
+            directory = outputFromTerminal.get(numberInArray).substring(5);
             System.out.println(directory);
-            additionalPaths = additionalPaths + directory;
+            additionalPaths = additionalPaths + "/" + directory;
             System.out.println(additionalPaths);
 
 
         } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd ..")) {
-            directory = "/" + outputFromTerminal.get(numberInArray).substring(5);
+            directory = outputFromTerminal.get(numberInArray).substring(5);
             System.out.println(directory);
             String[] separatePaths = additionalPaths.split("/");
             System.out.println(Arrays.deepToString(separatePaths));
             additionalPaths = "/";
 
 
-            if (!(separatePaths.length - 1 == 1)) {
+            if (separatePaths.length > 2) {
                 for (int index = 1; index < separatePaths.length - 1; index++) {
-                    additionalPaths = additionalPaths + separatePaths[index] + "/";
+                    additionalPaths = additionalPaths + separatePaths[index];
                     System.out.println(additionalPaths);
+                    if (((separatePaths.length - 1) - index) > 1) {
+                        additionalPaths = additionalPaths + "/";
+                    }
                 }
-            } else {
+            } else if (separatePaths.length == 2) {
                 additionalPaths = "";
+                System.out.println(additionalPaths);
+
+            } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd /")) {
+                additionalPaths = "/";
+                System.out.println(directory);
             }
-
-
-        } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd /")) {
-            directory = "/";
-            System.out.println(directory);
         }
     }
 
@@ -137,9 +140,6 @@ public class SpaceOnDevice {
 
     private static boolean doesExist(int numberInArray) {
         File directory = new File(tempFolderMainPath + additionalPaths + directoryName);
-        if (directory.exists()) {
-            return true;
-        }
-        return false;
+        return directory.exists();
     }
 }

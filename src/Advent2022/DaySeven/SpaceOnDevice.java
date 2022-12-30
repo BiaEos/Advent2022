@@ -20,7 +20,7 @@ import static Advent2022.Tools.LoadFile.inputFromFile;
 
 public class SpaceOnDevice {
     private static final ArrayList<String> outputFromTerminal = new ArrayList<>(inputFromFile());
-    private static final String tempFolderMainPath = "/Users/main/Projects/Advent2022/src/Advent2022/DaySeven/";
+    private static final String tempFolderMainPath = "/Users/main/Projects/Advent2022/src/Advent2022/DaySeven";
     private static String additionalPaths = "";
     private static String directoryName;
     private static String fileName;
@@ -31,7 +31,7 @@ public class SpaceOnDevice {
     }
 
     public static void startDayOne() {
-        createDirectory("TempFolder", tempFolderMainPath);
+        //createDirectory("/TempFolder", tempFolderMainPath);
         handleData();
     }
 
@@ -85,8 +85,8 @@ public class SpaceOnDevice {
 
 
         } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd ..")) {
-            directory = outputFromTerminal.get(numberInArray).substring(5);
-            System.out.println(directory);
+            //directory = outputFromTerminal.get(numberInArray).substring(5);
+            //System.out.println(directory);
             String[] separatePaths = additionalPaths.split("/");
             System.out.println(Arrays.deepToString(separatePaths));
             additionalPaths = "/";
@@ -104,10 +104,14 @@ public class SpaceOnDevice {
                 additionalPaths = "";
                 System.out.println(additionalPaths);
 
-            } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd /")) {
-                additionalPaths = "/";
-                System.out.println(directory);
             }
+        } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd /")) {
+                additionalPaths = "/main";
+                //System.out.println(directory);
+            }
+
+        if (!doesExist(tempFolderMainPath + additionalPaths)) {
+            createDirectory(additionalPaths, tempFolderMainPath);
         }
     }
 
@@ -128,18 +132,14 @@ public class SpaceOnDevice {
     }
 
     private static void addDirectory(int numberInArray) {
-        String[] directoryComplete = outputFromTerminal.get(numberInArray).split("\\s");
-        directoryName = directoryComplete[1];
-
-
-        //additionalPaths = additionalPaths + "/" + directoryName;
-        //System.out.println(directoryName);
-        //System.out.println(additionalPaths);
-
+        /*System.out.println("This is the current desired directory: " + path);
+        System.out.println("Does this directory exist: " + doesExist());
+        File checkExists = new File(tempFolderMainPath + path);*/
+        System.out.println("Add directory in this step");
     }
 
-    private static boolean doesExist(int numberInArray) {
-        File directory = new File(tempFolderMainPath + additionalPaths + directoryName);
+    private static boolean doesExist(String checkMe) {
+        File directory = new File(checkMe);
         return directory.exists();
     }
 }

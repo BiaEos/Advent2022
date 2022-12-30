@@ -10,7 +10,7 @@
 
 package Advent2022.DaySeven;
 
-import static Advent2022.DaySeven.SpaceOnDevice.start;
+import static Advent2022.DaySeven.CreateFileSystem.start;
 import static Advent2022.Tools.LoadFile.loadFile;
 
 public class DaySeven {

@@ -16,21 +16,27 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import static Advent2022.DaySeven.DetermineSpace.determineSpace;
 import static Advent2022.Tools.LaunchProgram.launchProgram;
 import static Advent2022.Tools.LoadFile.inputFromFile;
 
-public class SpaceOnDevice {
+public class CreateFileSystem {
     private static final ArrayList<String> outputFromTerminal = new ArrayList<>(inputFromFile());
     private static final String tempFolderMainPath = "/Users/main/Projects/Advent2022/src/Advent2022/DaySeven";
     private static String additionalPaths = "";
 
     public static void start() {
-        launchProgram("one", "two", SpaceOnDevice.class,
+        launchProgram("one", "two", CreateFileSystem.class,
                 "startDayOne", "startDayTwo");
     }
 
     public static void startDayOne() {
         handleData();
+        try {
+            determineSpace();
+        } catch (IOException e) {
+            System.out.println("Error walking tree");
+        }
     }
 
     public static void startDayTwo() {

@@ -14,7 +14,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.regex.Pattern;
 
 import static Advent2022.Tools.LaunchProgram.launchProgram;
@@ -56,13 +55,7 @@ public class SpaceOnDevice {
     }
 
     private static void addDirectory(int numberInArray) {
-        System.out.println("This is the current desired directory: " +
-                tempFolderMainPath + additionalPaths);
         String[] dirName = outputFromTerminal.get(numberInArray).split("\\s");
-        System.out.println("Does this directory exist " + tempFolderMainPath +
-                additionalPaths + "/" +dirName[1]);
-        System.out.println(doesExist(
-                tempFolderMainPath + additionalPaths + "/" + dirName[1]));
         if (!(doesExist(tempFolderMainPath + additionalPaths + "/" + dirName[1]))) {
             createDirectory("/" + dirName[1], tempFolderMainPath + additionalPaths);
         }
@@ -74,7 +67,6 @@ public class SpaceOnDevice {
         if (directory.exists() && directory.isDirectory()) {
             System.out.println("Directory already exists");
         } else {
-            System.out.println("Creating directory");
             success = directory.mkdir();
             directory.deleteOnExit();
             if (success) {
@@ -90,10 +82,7 @@ public class SpaceOnDevice {
         String fileSize;
         String[] completeFile = outputFromTerminal.get(numberInArray).split("\\s");
         fileSize = completeFile[0];
-        //System.out.println(fileSize);
         fileName = completeFile[1];
-        //System.out.println(fileName);
-        //}
         if (!(doesExist(tempFolderMainPath + additionalPaths + fileName))) {
             createFile(fileName, tempFolderMainPath + additionalPaths);
             writeToFile(fileName, fileSize);
@@ -103,13 +92,14 @@ public class SpaceOnDevice {
     private static void createFile(String fileName, String path) {
         try {
             File file = new File(path + "/" + fileName + ".txt");
+            file.deleteOnExit();
             if (file.createNewFile()) {
                 System.out.println("File created successfully");
             } else {
                 System.out.println("File already exists");
             }
         } catch (IOException e) {
-            System.out.println("Error occurred");
+            System.out.println("Failed to create file");
         }
     }
 
@@ -119,9 +109,9 @@ public class SpaceOnDevice {
                     additionalPaths + "/" + fileName + ".txt");
             myWriter.write(fileSize);
             myWriter.close();
-            System.out.println("Successfully wrote to the file.");
+            System.out.println("Successfully wrote to the file");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Failed to write to file");
         }
     }
 
@@ -130,24 +120,19 @@ public class SpaceOnDevice {
         Pattern cdPattern = Pattern.compile("\\W\\scd\\s[a-z]+");
         if (outputFromTerminal.get(numberInArray).matches(String.valueOf(cdPattern))) {
             directory = outputFromTerminal.get(numberInArray).substring(5);
-            System.out.println(directory);
             additionalPaths = additionalPaths + "/" + directory;
-            System.out.println(additionalPaths);
         } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd ..")) {
             String[] separatePaths = additionalPaths.split("/");
-            System.out.println(Arrays.deepToString(separatePaths));
             additionalPaths = "/";
             if (separatePaths.length > 2) {
                 for (int index = 1; index < separatePaths.length - 1; index++) {
                     additionalPaths = additionalPaths + separatePaths[index];
-                    System.out.println(additionalPaths);
                     if (((separatePaths.length - 1) - index) > 1) {
                         additionalPaths = additionalPaths + "/";
                     }
                 }
             } else if (separatePaths.length == 2) {
                 additionalPaths = "";
-                System.out.println(additionalPaths);
             }
         } else if (outputFromTerminal.get(numberInArray).startsWith("$ cd /")) {
                 additionalPaths = "/main";

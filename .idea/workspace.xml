@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/WalkTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/DaySeven/DaySeven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/DaySeven.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/DaySeven/SpaceOnDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/CreateFileSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +45,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "true",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -117,34 +117,34 @@
           <option name="timeStamp" value="317" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/CreateFileSystem.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="502" />
+          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="529" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="504" />
+          <line>30</line>
+          <option name="timeStamp" value="530" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="505" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="506" />
+          <line>31</line>
+          <option name="timeStamp" value="531" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java</url>
           <line>32</line>
-          <option name="timeStamp" value="507" />
+          <option name="timeStamp" value="532" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="533" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/DetermineSpace.java</url>
           <line>34</line>
-          <option name="timeStamp" value="511" />
+          <option name="timeStamp" value="534" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

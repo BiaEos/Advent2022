@@ -146,16 +146,6 @@
           <line>33</line>
           <option name="timeStamp" value="567" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/WorkingVersion.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="720" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/WorkingVersion.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="722" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

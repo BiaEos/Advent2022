@@ -10,10 +10,7 @@
 
 package Advent2022.DaySeven;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 import static Advent2022.Tools.LaunchProgram.launchProgram;
 import static Advent2022.Tools.LoadFile.inputFromFile;
@@ -22,6 +19,9 @@ public class WorkingVersion {
     private static final List<String> terminalOutput = new ArrayList<>(inputFromFile());
     private static final Stack<String> directories = new Stack<>();
     private static final HashMap<String, Integer> sizeOfDirectories = new HashMap<>();
+    private static int allSpaceUsed = 0;
+    private static int freeSpace = 0;
+    private static int sizeToDelete = 0;
     public static void start() {
         launchProgram("one", "two", WorkingVersion.class,
                 "startDayOne", "startDayTwo");
@@ -32,12 +32,15 @@ public class WorkingVersion {
     }
 
     public static void startDayTwo() {
-        System.out.println("do day two stuff");
+        sortData();
     }
 
     private static void sortData() {
         String addValues = "";
-        int totalSize = 0;
+        int totalSizeUnder1e5 = 0;
+
+        int sizeOfDrive = 70000000;
+        int totalSpaceNeeded = 30000000;
         for (String output : terminalOutput) {
             if (output.startsWith("$ cd")) {
                 String folderName = output.substring(5);
@@ -58,9 +61,20 @@ public class WorkingVersion {
         }
         for (String key : sizeOfDirectories.keySet()) {
             if (sizeOfDirectories.get(key) <= 100_000) {
-                totalSize += sizeOfDirectories.get(key);
+                totalSizeUnder1e5 += sizeOfDirectories.get(key);
             }
         }
-        System.out.println("The total size of directories <= 100,000 is: " + totalSize);
+        System.out.println("The total size of directories <= 100,000 is: " + totalSizeUnder1e5);
+        int allSpaceUsed = sizeOfDirectories.get("/");
+        int freeSpace = sizeOfDrive - allSpaceUsed;
+        int sizeToDelete = totalSpaceNeeded - freeSpace;
+        List<Integer> filesToDelete = new ArrayList<>();
+        for (String key : sizeOfDirectories.keySet()) {
+            if (sizeOfDirectories.get(key) >= sizeToDelete) {
+                filesToDelete.add(sizeOfDirectories.get(key));
+            }
+        }
+        System.out.println("The smallest file to delete and clear enough space is: " +
+                Collections.min(filesToDelete));
     }
 }

@@ -8,36 +8,42 @@
  **/
 
 
-package Advent2022.DaySeven;
+package Advent2022.DaySeven.FirstAttempts;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Map;
-
-import static Advent2022.DaySeven.WalkTree.individualPaths;
+import java.util.HashMap;
 
 public class DetermineSpace {
 
     public static void determineSpace() throws IOException {
         Path startingDir = Paths.get("/users/main/projects/advent2022/src/advent2022/dayseven/main");
+        HashMap <String, Integer> alreadyAddedValue = new HashMap<>();
         WalkTree visitor = new WalkTree();
         Files.walkFileTree(startingDir, visitor);
-        //System.out.println(paths);
 
-        int totalSize = 0;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+/*        int totalSize = 0;
         for (Map.Entry<String, Integer> aPath : individualPaths.entrySet()) {
-            Map.Entry<String, Integer> mapElement = aPath;
-            String key = mapElement.getKey();
-            //System.out.println(key);
-            int size = mapElement.getValue();
-            //System.out.println(size);
+            int size = aPath.getValue();
             if (size <= 100000) {
                 totalSize += size;
             }
         }
-        System.out.println(totalSize);
+        System.out.println("The total size of directories <= 100,000 is: " + totalSize);*/
     }
 
-}

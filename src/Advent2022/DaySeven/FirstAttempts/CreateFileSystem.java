@@ -8,15 +8,15 @@
  **/
 
 
-package Advent2022.DaySeven;
+package Advent2022.DaySeven.FirstAttempts;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
-import static Advent2022.DaySeven.DetermineSpace.determineSpace;
+import static Advent2022.DaySeven.FirstAttempts.DetermineSpace.determineSpace;
 import static Advent2022.Tools.LaunchProgram.launchProgram;
 import static Advent2022.Tools.LoadFile.inputFromFile;
 
@@ -24,6 +24,7 @@ public class CreateFileSystem {
     private static final ArrayList<String> outputFromTerminal = new ArrayList<>(inputFromFile());
     private static final String tempFolderMainPath = "/Users/main/Projects/Advent2022/src/Advent2022/DaySeven";
     private static String additionalPaths = "";
+    private static int fileSize;
 
     public static void start() {
         launchProgram("one", "two", CreateFileSystem.class,
@@ -36,6 +37,7 @@ public class CreateFileSystem {
             determineSpace();
         } catch (IOException e) {
             System.out.println("Error walking tree");
+            e.printStackTrace();
         }
     }
 
@@ -85,13 +87,12 @@ public class CreateFileSystem {
 
     private static void addFile(int numberInArray) {
         String fileName;
-        String fileSize;
         String[] completeFile = outputFromTerminal.get(numberInArray).split("\\s");
-        fileSize = completeFile[0];
+        fileSize = Integer.parseInt(completeFile[0]);
         fileName = completeFile[1];
         if (!(doesExist(tempFolderMainPath + additionalPaths + fileName))) {
             createFile(fileName, tempFolderMainPath + additionalPaths);
-            writeToFile(fileName, fileSize);
+            setFileSize(fileName, "rw");
         }
     }
 
@@ -109,17 +110,18 @@ public class CreateFileSystem {
         }
     }
 
-    private static void writeToFile(String fileName, String fileSize) {
+    private static void setFileSize(String fileName, String mode) {
         try {
-            FileWriter myWriter = new FileWriter(tempFolderMainPath +
-                    additionalPaths + "/" + fileName + ".txt");
-            myWriter.write(fileSize);
-            myWriter.close();
+            RandomAccessFile myRAF = new RandomAccessFile(tempFolderMainPath +
+                    additionalPaths + "/" + fileName + ".txt", mode);
+            myRAF.setLength(fileSize);
+            myRAF.close();
             System.out.println("Successfully wrote to the file");
         } catch (IOException e) {
             System.out.println("Failed to write to file");
         }
     }
+
 
     private static void changeFolders(int numberInArray) {
         String directory;

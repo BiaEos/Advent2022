@@ -10,12 +10,13 @@
 
 package Advent2022.DaySeven;
 
-import static Advent2022.DaySeven.CreateFileSystem.start;
+import static Advent2022.DaySeven.WorkingVersion.start;
 import static Advent2022.Tools.LoadFile.loadFile;
 
 public class DaySeven {
     public static void daySeven() {
         loadFile("src/Advent2022/DaySeven/terminalOutput.txt");
         start();
+
     }
 }

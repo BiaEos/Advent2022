@@ -17,7 +17,7 @@ public class LaunchProgram {
                                          String methodOneName, String methodTwoName) {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Do you want " + optionOne + " or " + optionTwo + " ?");
+        System.out.println("Do you want part " + optionOne + " or part " + optionTwo + " ?");
         String answer = input.next();
         if (answer.equalsIgnoreCase(optionOne)) {
             try {

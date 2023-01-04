@@ -22,7 +22,7 @@ public class TreeHouseLocation {
     private static List<String> alreadyMarkedTrees = new ArrayList<String>();
 
     public static void start() {
-        launchProgram("one", "two", TreeHouseLocation.class,
+        launchProgram("One", "Two", TreeHouseLocation.class,
                 "startDayOne", "startDayTwo");
     }
 

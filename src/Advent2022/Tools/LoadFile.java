@@ -94,7 +94,7 @@ public class LoadFile {
                 for (int k = 0; k < columnCountB * widthOfInput; k += widthOfInput) {
                     String nextIndex = nextLine.substring(k + 1, ((k + widthOfInput) - 2));
                     inputFromFile2DArray[i][j] = nextIndex;
-                    if (j == 8) {
+                    if (j == widthOfInput) {
                         j = 0;
                     } else {
                         j++;

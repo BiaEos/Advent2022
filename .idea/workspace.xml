@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ac0f216-c96d-47cb-9252-8c126e601606" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Advent2022/DayNine/seriesOfMotions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Advent2022/DayNine/DayNine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayNine/DayNine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advent2022/DayNine/dayNineStuff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Advent2022/DayNine/testFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Advent2022/DayNine/testFile.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,111 +148,6 @@
           <url>file://$PROJECT_DIR$/src/Advent2022/DaySeven/FirstAttempts/DetermineSpace.java</url>
           <line>33</line>
           <option name="timeStamp" value="567" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="905" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="906" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="908" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="909" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="911" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="912" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="914" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="915" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="917" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="921" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="922" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="923" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="924" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="925" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="926" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="927" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="928" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="929" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="930" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="932" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Advent2022/DayNine/NewStartProject.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="933" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

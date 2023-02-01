@@ -15,7 +15,8 @@ import static Advent2022.Tools.LoadFile.loadFile;
 
 public class DayNine {
     public static void dayNine() {
-        loadFile("src/Advent2022/DayNine/dayNineStuff.txt");
+        //loadFile("src/Advent2022/DayNine/seriesOfMotions.txt");
+        loadFile("src/Advent2022/DayNine/testFile.txt");
         start();
     }
 }
